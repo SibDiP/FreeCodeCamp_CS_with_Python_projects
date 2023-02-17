@@ -3,4 +3,5 @@
 
 ## Navigation:
 Projects are separeted by branches.<br>
-1. [main](https://github.com/SibDiP/FreeCodeCamp_CS_with_Python_projects/tree/main) - Info
+1. [main](https://github.com/SibDiP/FreeCodeCamp_CS_with_Python_projects/tree/main) / Info
+2. [Arithmetic Formatter](https://github.com/SibDiP/FreeCodeCamp_CS_with_Python_projects/tree/1-arithmetic-formatter)
