@@ -1,71 +1,68 @@
-<h1>Budget App</h1>
-<p><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/budget-app">FreeCodeCamp project Link</a> 
-</p>
-<hr>
-<h2>Description:</h2>
-<p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-budget-app" target="_blank" rel="noopener noreferrer nofollow">working on this project with our Replit starter code</a>.</p>
+<h1>Polygon Area Calculator</h1>
+<p>This is a 4/5 training <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/polygon-area-calculator">project</a> for the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects">freeCodeCamp: Scientific Computing with Python</a> course.</p>
+<h2>Task Description:</h2>
+<p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-polygon-area-calculator" target="_blank" rel="noopener noreferrer nofollow">working on this project with our Replit starter code</a>.</p>
 <ul>
-<li>
-<p>Start by importing the project on Replit.</p>
-</li>
-<li>
-<p>Next, you will see a <code>.replit</code> window.</p>
-</li>
-<li>
-<p>Select <code>Use run command</code> and click the <code>Done</code> button.</p>
-</li>
+<li>Start by importing the project on Replit.</li>
+<li>Next, you will see a <code>.replit</code> window.</li>
+<li>Select <code>Use run command</code> and click the <code>Done</code> button.</li>
 </ul>
 <hr><div><section id="instructions">
-<p>Complete the <code>Category</code> class in <code>budget.py</code>. It should be able to instantiate objects based on different budget categories like <em>food</em>, <em>clothing</em>, and <em>entertainment</em>. When objects are created, they are passed in the name of the category. The class should have an instance variable called <code>ledger</code> that is a list. The class should also contain the following methods:</p>
+<p>In this project you will use object oriented programming to create a Rectangle class and a Square class. The Square class should be a subclass of Rectangle and inherit methods and attributes.</p>
+<h2>Rectangle class</h2>
+<p>When a Rectangle object is created, it should be initialized with <code>width</code> and <code>height</code> attributes. The class should also contain the following methods:</p>
 <ul>
-<li>A <code>deposit</code> method that accepts an amount and description. If no description is given, it should default to an empty string. The method should append an object to the ledger list in the form of <code>{"amount": amount, "description": description}</code>.</li>
-<li>A <code>withdraw</code> method that is similar to the <code>deposit</code> method, but the amount passed in should be stored in the ledger as a negative number. If there are not enough funds, nothing should be added to the ledger. This method should return <code>True</code> if the withdrawal took place, and <code>False</code> otherwise.</li>
-<li>A <code>get_balance</code> method that returns the current balance of the budget category based on the deposits and withdrawals that have occurred.</li>
-<li>A <code>transfer</code> method that accepts an amount and another budget category as arguments. The method should add a withdrawal with the amount and the description "Transfer to [Destination Budget Category]". The method should then add a deposit to the other budget category with the amount and the description "Transfer from [Source Budget Category]". If there are not enough funds, nothing should be added to either ledgers. This method should return <code>True</code> if the transfer took place, and <code>False</code> otherwise.</li>
-<li>A <code>check_funds</code> method that accepts an amount as an argument. It returns <code>False</code> if the amount is greater than the balance of the budget category and returns <code>True</code> otherwise. This method should be used by both the <code>withdraw</code> method and <code>transfer</code> method.</li>
+<li><code>set_width</code></li>
+<li><code>set_height</code></li>
+<li><code>get_area</code>: Returns area (<code>width * height</code>)</li>
+<li><code>get_perimeter</code>: Returns perimeter (<code>2 * width + 2 * height</code>)</li>
+<li><code>get_diagonal</code>: Returns diagonal (<code>(width ** 2 + height ** 2) ** .5</code>)</li>
+<li><code>get_picture</code>: Returns a string that represents the shape using lines of "*". The number of lines should be equal to the height and the number of "*" in each line should be equal to the width. There should be a new line (<code>\n</code>) at the end of each line. If the width or height is larger than 50, this should return the string: "Too big for picture.".</li>
+<li><code>get_amount_inside</code>: Takes another shape (square or rectangle) as an argument. Returns the number of times the passed in shape could fit inside the shape (with no rotations). For instance, a rectangle with a width of 4 and a height of 8 could fit in two squares with sides of 4.</li>
 </ul>
-<p>When the budget object is printed it should display:</p>
-<ul>
-<li>A title line of 30 characters where the name of the category is centered in a line of <code>*</code> characters.</li>
-<li>A list of the items in the ledger. Each line should show the description and amount. The first 23 characters of the description should be displayed, then the amount. The amount should be right aligned, contain two decimal places, and display a maximum of 7 characters.</li>
-<li>A line displaying the category total.</li>
-</ul>
-<p>Here is an example of the output:</p>
-<pre class="language-bash" tabindex="0" role="region" aria-label=" code example"><code class="language-bash">*************Food*************
-initial deposit        1000.00
-groceries               -10.15
-restaurant and more foo -15.89
-Transfer to Clothing    -50.00
-Total: 923.96
+<p>Additionally, if an instance of a Rectangle is represented as a string, it should look like: <code>Rectangle(width=5, height=10)</code></p>
+<h2>Square class</h2>
+<p>The Square class should be a subclass of Rectangle. When a Square object is created, a single side length is passed in. The <code>__init__</code> method should store the side length in both the <code>width</code> and <code>height</code> attributes from the Rectangle class.</p>
+<p>The Square class should be able to access the Rectangle class methods but should also contain a <code>set_side</code> method. If an instance of a Square is represented as a string, it should look like: <code>Square(side=9)</code></p>
+<p>Additionally, the <code>set_width</code> and <code>set_height</code> methods on the Square class should set both the width and height.</p>
+<h2>Usage example</h2>
+<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">rect <span class="token operator">=</span> shape_calculator<span class="token punctuation">.</span>Rectangle<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>get_area<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+rect<span class="token punctuation">.</span>set_height<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>get_perimeter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rect<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>get_picture<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+sq <span class="token operator">=</span> shape_calculator<span class="token punctuation">.</span>Square<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sq<span class="token punctuation">.</span>get_area<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+sq<span class="token punctuation">.</span>set_side<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sq<span class="token punctuation">.</span>get_diagonal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sq<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sq<span class="token punctuation">.</span>get_picture<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+rect<span class="token punctuation">.</span>set_height<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+rect<span class="token punctuation">.</span>set_width<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>get_amount_inside<span class="token punctuation">(</span>sq<span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<p>Besides the <code>Category</code> class, create a function (outside of the class) called <code>create_spend_chart</code> that takes a list of categories as an argument. It should return a string that is a bar chart.</p>
-<p>The chart should show the percentage spent in each category passed in to the function. The percentage spent should be calculated only with withdrawals and not with deposits. Down the left side of the chart should be labels 0 - 100. The "bars" in the bar chart should be made out of the "o" character. The height of each bar should be rounded down to the nearest 10. The horizontal line below the bars should go two spaces past the final bar. Each category name should be written vertically below the bar. There should be a title at the top that says "Percentage spent by category".</p>
-<p>This function will be tested with up to four categories.</p>
-<p>Look at the example output below very closely and make sure the spacing of the output matches the example exactly.</p>
-<pre class="language-bash" tabindex="0" role="region" aria-label=" code example"><code class="language-bash">Percentage spent by category
-100|          
- 90|          
- 80|          
- 70|          
- 60| o        
- 50| o        
- 40| o        
- 30| o        
- 20| o  o     
- 10| o  o  o  
-  0| o  o  o  
-    ----------
-     F  C  A  
-     o  l  u  
-     o  o  t  
-     d  t  o  
-        h     
-        i     
-        n     
-        g     
+<p>That code should return:</p>
+<pre class="language-bash" tabindex="0" role="region" aria-label=" code example"><code class="language-bash">50
+26
+Rectangle(width=10, height=3)
+**********
+**********
+**********<br>
+81
+5.656854249492381
+Square(side=4)
+****
+****
+****
+****
+
+8
 </code></pre>
 <p>The unit tests for this project are in <code>test_module.py</code>.</p>
 <h2>Development</h2>
-<p>Write your code in <code>budget.py</code>. For development, you can use <code>main.py</code> to test your <code>Category</code> class. Click the "run" button and <code>main.py</code> will run.</p>
+<p>Write your code in <code>shape_calculator.py</code>. For development, you can use <code>main.py</code> to test your <code>shape_calculator()</code> function. Click the "run" button and <code>main.py</code> will run.</p>
 <h2>Testing</h2>
-<p>We imported the tests from <code>test_module.py</code> to <code>main.py</code> for your convenience. The tests will run automatically whenever you hit the "run" button.</p></section></div>
+<p>We imported the tests from <code>test_module.py</code> to <code>main.py</code> for your convenience. The tests will run automatically whenever you hit the "run" button.</p></code></pre></code></pre></section></div>
