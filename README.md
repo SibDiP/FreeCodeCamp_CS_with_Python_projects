@@ -1,4 +1,4 @@
-<h1>Arithmetic Formatter</h1>
+<h1>Budget App</h1>
 <p>This is a 3/5 training <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/budget-app">project</a> for the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects">freeCodeCamp: Scientific Computing with Python</a> course.</p>
 <h2>Task Description:</h2>
 <p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-budget-app" target="_blank" rel="noopener noreferrer nofollow">working on this project with our Replit starter code</a>.</p>
