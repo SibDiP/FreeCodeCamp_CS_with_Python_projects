@@ -1,66 +1,45 @@
-<h1>Arithmetic Formatter</h1>
+<h1>Time Calculator</h1>
+<p><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/time-calculator">FreeCodeCamp project Link</a> 
+</p>
 <hr>
-<p>This is a 1/5 training project for the course <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/arithmetic-formatter">freeCodeCamp: Scientific Computing with Python Projects</a>.</p>
-<h2>Task Description:</h2>
-<p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-arithmetic-formatter" target="_blank" rel="noopener noreferrer nofollow"> working on this project with our Replit starter code</a>.</p>
+<h2>Description:</h2>
+<p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-time-calculator" target="_blank" rel="noopener noreferrer nofollow">working on this project with our Replit starter code</a>.</p>
 <ul>
 <li>Start by importing the project on Replit.</li>
 <li>Next, you will see a <code>.replit</code> window.</li>
 <li>Select <code>Use run command</code> and click the <code>Done</code> button.</li>
 </ul>
 <hr><div><section id="instructions">
-<p>Students in primary school often arrange arithmetic problems vertically to make them easier to solve. For example, "235 + 52" becomes:</p>
-<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">  <span class="token number">235</span>
-<span class="token operator">+</span>  <span class="token number">52</span>
-<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
-</code></pre>
-<p>Create a function that receives a list of strings that are arithmetic problems and returns the problems arranged vertically and side-by-side. The function should optionally take a second argument. When the second argument is set to <code>True</code>, the answers should be displayed.</p>
-<h2>Example</h2>
-<p>Function Call:</p>
-<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">arithmetic_arranger<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"32 + 698"</span><span class="token punctuation">,</span> <span class="token string">"3801 - 2"</span><span class="token punctuation">,</span> <span class="token string">"45 + 43"</span><span class="token punctuation">,</span> <span class="token string">"123 + 49"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
-<p>Output:</p>
-<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">   <span class="token number">32</span>      <span class="token number">3801</span>      <span class="token number">45</span>      <span class="token number">123</span>
-<span class="token operator">+</span> <span class="token number">698</span>    <span class="token operator">-</span>    <span class="token number">2</span>    <span class="token operator">+</span> <span class="token number">43</span>    <span class="token operator">+</span>  <span class="token number">49</span>
-<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
-</code></pre>
-<p>Function Call:</p>
-<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">arithmetic_arranger<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"32 + 8"</span><span class="token punctuation">,</span> <span class="token string">"1 - 3801"</span><span class="token punctuation">,</span> <span class="token string">"9999 + 9999"</span><span class="token punctuation">,</span> <span class="token string">"523 - 49"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
-</code></pre>
-<p>Output:</p>
-<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">  <span class="token number">32</span>         <span class="token number">1</span>      <span class="token number">9999</span>      <span class="token number">523</span>
-<span class="token operator">+</span>  <span class="token number">8</span>    <span class="token operator">-</span> <span class="token number">3801</span>    <span class="token operator">+</span> <span class="token number">9999</span>    <span class="token operator">-</span>  <span class="token number">49</span>
-<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
-  <span class="token number">40</span>     <span class="token operator">-</span><span class="token number">3800</span>     <span class="token number">19998</span>      <span class="token number">474</span>
-</code></pre>
-<h2>Rules</h2>
-<p>The function will return the correct conversion if the supplied problems are properly formatted, otherwise, it will <strong>return</strong> a <strong>string</strong> that describes an error that is meaningful to the user.</p>
+<p>Write a function named <code>add_time</code> that takes in two required parameters and one optional parameter:</p>
 <ul>
-<li>Situations that will return an error:
-<ul>
-<li>If there are <strong>too many problems</strong> supplied to the function. The limit is <strong>five</strong>, anything more will return:
-<code>Error: Too many problems.</code></li>
-<li>The appropriate operators the function will accept are <strong>addition</strong> and <strong>subtraction</strong>. Multiplication and division will return an error. Other operators not mentioned in this bullet point will not need to be tested. The error returned will be:
-<code>Error: Operator must be '+' or '-'.</code></li>
-<li>Each number (operand) should only contain digits. Otherwise, the function will return:
-<code>Error: Numbers must only contain digits.</code></li>
-<li>Each operand (aka number on each side of the operator) has a max of four digits in width. Otherwise, the error string returned will be:
-<code>Error: Numbers cannot be more than four digits.</code></li>
+<li>a start time in the 12-hour clock format (ending in AM or PM)</li>
+<li>a duration time that indicates the number of hours and minutes</li>
+<li>(optional) a starting day of the week, case insensitive</li>
 </ul>
-</li>
-<li>If the user supplied the correct format of problems, the conversion you return will follow these rules:
-<ul>
-<li>There should be a single space between the operator and the longest of the two operands, the operator will be on the same line as the second operand, both operands will be in the same order as provided (the first will be the top one and the second will be the bottom).</li>
-<li>Numbers should be right-aligned.</li>
-<li>There should be four spaces between each problem.</li>
-<li>There should be dashes at the bottom of each problem. The dashes should run along the entire length of each problem individually. (The example above shows what this should look like.)</li>
-</ul>
-</li>
-</ul>
+<p>The function should add the duration time to the start time and return the result.</p>
+<p>If the result will be the next day, it should show <code>(next day)</code> after the time. If the result will be more than one day later, it should show <code>(n days later)</code> after the time, where "n" is the number of days later.</p>
+<p>If the function is given the optional starting day of the week parameter, then the output should display the day of the week of the result. The day of the week in the output should appear after the time and before the number of days later.</p>
+<p>Below are some examples of different cases the function should handle. Pay close attention to the spacing and punctuation of the results.</p>
+<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">add_time<span class="token punctuation">(</span><span class="token string">"3:00 PM"</span><span class="token punctuation">,</span> <span class="token string">"3:10"</span><span class="token punctuation">)</span>
+<span class="token comment"># Returns: 6:10 PM</span>
+
+add_time<span class="token punctuation">(</span><span class="token string">"11:30 AM"</span><span class="token punctuation">,</span> <span class="token string">"2:32"</span><span class="token punctuation">,</span> <span class="token string">"Monday"</span><span class="token punctuation">)</span>
+<span class="token comment"># Returns: 2:02 PM, Monday</span>
+
+add_time<span class="token punctuation">(</span><span class="token string">"11:43 AM"</span><span class="token punctuation">,</span> <span class="token string">"00:20"</span><span class="token punctuation">)</span>
+<span class="token comment"># Returns: 12:03 PM</span>
+
+add_time<span class="token punctuation">(</span><span class="token string">"10:10 PM"</span><span class="token punctuation">,</span> <span class="token string">"3:30"</span><span class="token punctuation">)</span>
+<span class="token comment"># Returns: 1:40 AM (next day)</span>
+
+add_time<span class="token punctuation">(</span><span class="token string">"11:43 PM"</span><span class="token punctuation">,</span> <span class="token string">"24:20"</span><span class="token punctuation">,</span> <span class="token string">"tueSday"</span><span class="token punctuation">)</span>
+<span class="token comment"># Returns: 12:03 AM, Thursday (2 days later)</span>
+
+add_time<span class="token punctuation">(</span><span class="token string">"6:30 PM"</span><span class="token punctuation">,</span> <span class="token string">"205:12"</span><span class="token punctuation">)</span>
+<span class="token comment"># Returns: 7:42 AM (9 days later)</span>
+</code></pre>
+<p>Do not import any Python libraries. Assume that the start times are valid times. The minutes in the duration time will be a whole number less than 60, but the hour can be any whole number.</p>
 <h2>Development</h2>
-<p>Write your code in <code>arithmetic_arranger.py</code>. For development, you can use <code>main.py</code> to test your <code>arithmetic_arranger()</code> function. Click the "run" button and <code>main.py</code> will run.</p>
+<p>Write your code in <code>time_calculator.py</code>. For development, you can use <code>main.py</code> to test your <code>time_calculator()</code> function. Click the "run" button and <code>main.py</code> will run.</p>
 <h2>Testing</h2>
-<p>The unit tests for this project are in <code>test_module.py</code>. We are running the tests from <code>test_module.py</code> in <code>main.py</code> for your convenience. The tests will run automatically whenever you hit the "run" button. Alternatively you may run the tests by inputting <code>pytest</code> in the console.</p>
-
-</section></div><hr>
-
+<p>The unit tests for this project are in <code>test_module.py</code>. We imported the tests from <code>test_module.py</code> to <code>main.py</code> for your convenience. The tests will run automatically whenever you hit the "run" button.</p></code></pre></section></div>
