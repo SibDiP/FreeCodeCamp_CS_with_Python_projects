@@ -1,8 +1,6 @@
-<h1>Time Calculator</h1>
-<p><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/time-calculator">FreeCodeCamp project Link</a> 
-</p>
-<hr>
-<h2>Description:</h2>
+<h1>Arithmetic Formatter</h1>
+<p>This is a 2/5 training <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/time-calculator">project</a> for the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects">freeCodeCamp: Scientific Computing with Python</a> course.</p>
+<h2>Task Description:</h2>
 <p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-time-calculator" target="_blank" rel="noopener noreferrer nofollow">working on this project with our Replit starter code</a>.</p>
 <ul>
 <li>Start by importing the project on Replit.</li>
