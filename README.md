@@ -1,5 +1,4 @@
 <h1>Arithmetic Formatter</h1>
-<hr>
 <p>This is a 1/5 training project for the course <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/arithmetic-formatter">freeCodeCamp: Scientific Computing with Python Projects</a>.</p>
 <h2>Task Description:</h2>
 <p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-arithmetic-formatter" target="_blank" rel="noopener noreferrer nofollow"> working on this project with our Replit starter code</a>.</p>
