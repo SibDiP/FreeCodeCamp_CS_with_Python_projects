@@ -1,7 +1,40 @@
-# FreeCodeCamp: Scientific Computing with Python (Projects)
->In the [Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) Certification, you'll learn Python fundamentals like variables, loops, conditionals, and functions. Then you'll quickly ramp up to complex data structures, networking, relational databases, and data visualization.© 
-
-## Navigation:
-Projects are separeted by branches.<br>
-1. [main](https://github.com/SibDiP/FreeCodeCamp_CS_with_Python_projects/tree/main) / Info
-2. [Arithmetic Formatter](https://github.com/SibDiP/FreeCodeCamp_CS_with_Python_projects/tree/1-arithmetic-formatter)
+<h1>Probability Calculator</h1>
+<p>This is a 5/5 training <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/probability-calculator">project</a> for the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects">freeCodeCamp: Scientific Computing with Python</a> course.</p>
+<h2>Task Description:</h2>
+<p>You will be <a href="https://replit.com/github/freeCodeCamp/boilerplate-probability-calculator" target="_blank" rel="noopener noreferrer nofollow">working on this project with our Replit starter code</a>.</p>
+<ul>
+<li>Start by importing the project on Replit.</li>
+<li>Next, you will see a <code>.replit</code> window.</li>
+<li>Select <code>Use run command</code> and click the <code>Done</code> button.</li>
+</ul>
+<hr><div><section id="instructions">
+<p>Suppose there is a hat containing 5 blue balls, 4 red balls, and 2 green balls. What is the probability that a random draw of 4 balls will contain at least 1 red ball and 2 green balls? While it would be possible to calculate the probability using advanced mathematics, an easier way is to write a program to perform a large number of experiments to estimate an approximate probability.</p>
+<p>For this project, you will write a program to determine the approximate probability of drawing certain balls randomly from a hat.</p>
+<p>First, create a <code>Hat</code> class in <code>prob_calculator.py</code>. The class should take a variable number of arguments that specify the number of balls of each color that are in the hat. For example, a class object could be created in any of these ways:</p>
+<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">hat1 <span class="token operator">=</span> Hat<span class="token punctuation">(</span>yellow<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> blue<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> green<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">)</span>
+hat2 <span class="token operator">=</span> Hat<span class="token punctuation">(</span>red<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> orange<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+hat3 <span class="token operator">=</span> Hat<span class="token punctuation">(</span>red<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> orange<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> black<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> blue<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> pink<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> striped<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>
+</code></pre>
+<p>A hat will always be created with at least one ball. The arguments passed into the hat object upon creation should be converted to a <code>contents</code> instance variable. <code>contents</code> should be a list of strings containing one item for each ball in the hat. Each item in the list should be a color name representing a single ball of that color. For example, if your hat is <code>{"red": 2, "blue": 1}</code>, <code>contents</code> should be <code>["red", "red", "blue"]</code>.</p>
+<p>The <code>Hat</code> class should have a <code>draw</code> method that accepts an argument indicating the number of balls to draw from the hat. This method should remove balls at random from <code>contents</code> and return those balls as a list of strings. The balls should not go back into the hat during the draw, similar to an urn experiment without replacement. If the number of balls to draw exceeds the available quantity, return all the balls.</p>
+<p>Next, create an <code>experiment</code> function in <code>prob_calculator.py</code> (not inside the <code>Hat</code> class). This function should accept the following arguments:</p>
+<ul>
+<li><code>hat</code>: A hat object containing balls that should be copied inside the function.</li>
+<li><code>expected_balls</code>: An object indicating the exact group of balls to attempt to draw from the hat for the experiment. For example, to determine the probability of drawing 2 blue balls and 1 red ball from the hat, set <code>expected_balls</code> to <code>{"blue":2, "red":1}</code>.</li>
+<li><code>num_balls_drawn</code>: The number of balls to draw out of the hat in each experiment.</li>
+<li><code>num_experiments</code>: The number of experiments to perform. (The more experiments performed, the more accurate the approximate probability will be.)</li>
+</ul>
+<p>The <code>experiment</code> function should return a probability.</p>
+<p>For example, if you want to determine the probability of getting at least two red balls and one green ball when you draw five balls from a hat containing six black, four red, and three green. To do this, you will perform <code>N</code> experiments, count how many times <code>M</code> you get at least two red balls and one green ball, and estimate the probability as <code>M/N</code>. Each experiment consists of starting with a hat containing the specified balls, drawing several balls, and checking if you got the balls you were attempting to draw.</p>
+<p>Here is how you would call the <code>experiment</code> function based on the example above with 2000 experiments:</p>
+<pre class="language-py" tabindex="0" role="region" aria-label="python code example"><code class="language-py">hat <span class="token operator">=</span> Hat<span class="token punctuation">(</span>black<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> red<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> green<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+probability <span class="token operator">=</span> experiment<span class="token punctuation">(</span>hat<span class="token operator">=</span>hat<span class="token punctuation">,</span>
+                  expected_balls<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"red"</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">"green"</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                  num_balls_drawn<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span>
+                  num_experiments<span class="token operator">=</span><span class="token number">2000</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Since this is based on random draws, the probability will be slightly different each time the code is run.</p>
+<p><em>Hint: Consider using the modules that are already imported at the top of <code>prob_calculator.py</code>. Do not initialize random seed within <code>prob_calculator.py</code>.</em></p>
+<h2>Development</h2>
+<p>Write your code in <code>prob_calculator.py</code>. For development, you can use <code>main.py</code> to test your code. Click the "run" button and <code>main.py</code> will run.</p>
+<p>The boilerplate includes <code>import</code> statements for the <code>copy</code> and <code>random</code> modules. Consider using those in your project.</p></section></div>
